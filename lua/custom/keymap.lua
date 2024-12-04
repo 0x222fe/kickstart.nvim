@@ -4,7 +4,7 @@ vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = '[P]roject [V]iew' })
 
 vim.keymap.set('n', '<leader>pf', function()
   telescope.find_files {
-    cwd = vim.fn.getcwd(), -- Ensure the search is scoped to the current working directory
+    cwd = vim.fn.getcwd(),
     hidden = true,
   }
 end, { desc = '[P]roject [F]iles' })
