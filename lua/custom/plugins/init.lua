@@ -3,5 +3,7 @@
 --
 -- See the kickstart.nvim README for more information
 return {
+
+  { 'github/copilot.vim' },
   { 'wakatime/vim-wakatime', lazy = false },
 }
