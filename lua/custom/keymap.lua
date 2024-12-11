@@ -2,10 +2,20 @@ local telescope = require 'telescope.builtin'
 
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = '[P]roject [V]iew' })
 
+-- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+-- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+vim.keymap.set('n', 'J', 'mzJ`z')
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
+
 vim.keymap.set('n', '<leader>pf', function()
   telescope.find_files {
     cwd = vim.fn.getcwd(),
     hidden = true,
+    no_ignore = true,
   }
 end, { desc = '[P]roject [F]iles' })
 
@@ -16,6 +26,12 @@ vim.keymap.set('n', '<leader>gf', function()
     show_untracked = true,
   }
 end, { desc = '[G]it [F]iles' })
+
+vim.keymap.set('n', '<leader>ps', function()
+  telescope.live_grep()
+end, { desc = '[P]roject [S]earch' })
+
+vim.keymap.set('n', '<leader>vh', telescope.help_tags, { desc = '[V]view telescope [H]elp' })
 
 vim.keymap.set('n', '<leader>gb', function()
   telescope.git_branches()
@@ -39,7 +55,6 @@ require('telescope').setup {
   defaults = {
     layout_config = {
       width = 0.9,
-      preview_width = 0.7,
       horizontal = {
         preview_width = 0.7,
       },
