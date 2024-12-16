@@ -2,7 +2,7 @@ local mason_lspconfig = require 'mason-lspconfig'
 local lspconfig = require 'lspconfig'
 
 mason_lspconfig.setup {
-  ensure_installed = { 'omnisharp' },
+  ensure_installed = { 'vls', 'omnisharp' },
 }
 
 lspconfig.omnisharp.setup {

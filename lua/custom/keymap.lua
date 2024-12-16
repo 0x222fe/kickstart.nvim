@@ -1,5 +1,7 @@
 local telescope = require 'telescope.builtin'
 
+vim.keymap.set('n', '<leader>cd', vim.diagnostic.open_float, { desc = '[C]ode [D]iagnostic' })
+
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = '[P]roject [V]iew' })
 
 -- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -16,6 +18,7 @@ vim.keymap.set('n', '<leader>pf', function()
     cwd = vim.fn.getcwd(),
     hidden = true,
     no_ignore = true,
+    file_ignore_patterns = { '%.o$', '%.so$', '%.bin$', '%.exe$', '%.class$', '%.dll$', '%.dat$', '%.pyc$', '%.pdb$' },
   }
 end, { desc = '[P]roject [F]iles' })
 
