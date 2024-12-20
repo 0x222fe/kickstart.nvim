@@ -4,8 +4,10 @@ vim.keymap.set('n', '<leader>cd', vim.diagnostic.open_float, { desc = '[C]ode [D
 
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = '[P]roject [V]iew' })
 
--- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
--- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+
+vim.keymap.set('i', '<C-c>', '<Esc>')
 
 vim.keymap.set('n', 'J', 'mzJ`z')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
@@ -24,11 +26,17 @@ end, { desc = '[P]roject [F]iles' })
 
 pcall(require('telescope').load_extension, 'git')
 
-vim.keymap.set('n', '<leader>gf', function()
+vim.keymap.set('n', '<C-p>', function()
   telescope.git_files {
     show_untracked = true,
   }
-end, { desc = '[G]it [F]iles' })
+end)
+
+-- vim.keymap.set('n', '<leader>gf', function()
+--   telescope.git_files {
+--     show_untracked = true,
+--   }
+-- end, { desc = '[G]it [F]iles' })
 
 vim.keymap.set('n', '<leader>ps', function()
   telescope.live_grep()
