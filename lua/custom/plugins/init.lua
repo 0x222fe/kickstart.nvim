@@ -5,6 +5,7 @@
 require 'custom.plugins.fugitive'
 return {
   { 'ThePrimeagen/vim-be-good' },
+  { 'nvim-treesitter/nvim-treesitter-context' },
   { 'tpope/vim-fugitive' },
   { 'fatih/vim-go' },
   { 'github/copilot.vim' },
