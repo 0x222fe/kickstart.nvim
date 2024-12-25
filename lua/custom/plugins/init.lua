@@ -6,7 +6,7 @@ require 'custom.plugins.fugitive'
 return {
   { 'ThePrimeagen/vim-be-good' },
   { 'nvim-treesitter/nvim-treesitter-context' },
-  { 'tpope/vim-fugitive' },
+  { 'ThePrimeagen/harpoon', branch = 'harpoon2', dependencies = { 'nvim-lua/plenary.nvim', 'telescope.nvim' } },
   { 'fatih/vim-go' },
   { 'github/copilot.vim' },
   { 'wakatime/vim-wakatime', lazy = false },

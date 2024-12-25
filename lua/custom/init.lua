@@ -1,6 +1,7 @@
 require 'custom.set'
 require 'custom.keymap'
 require 'custom.lsp'
+require 'custom.harpoon'
 
 vim.api.nvim_create_augroup('netrw_settings', { clear = true })
 vim.api.nvim_create_autocmd('FileType', {
