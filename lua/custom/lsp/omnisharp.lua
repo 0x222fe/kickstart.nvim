@@ -1,9 +1,4 @@
-local mason_lspconfig = require 'mason-lspconfig'
 local lspconfig = require 'lspconfig'
-
-mason_lspconfig.setup {
-  ensure_installed = { 'vls', 'omnisharp' },
-}
 
 lspconfig.omnisharp.setup {
   cmd = { 'omnisharp', '--languageserver', '--hostPID', tostring(vim.fn.getpid()) },
