@@ -3,6 +3,7 @@
 --
 -- See the kickstart.nvim README for more information
 require 'custom.plugins.fugitive'
+require 'custom.plugins.ufo'
 return {
   { 'ThePrimeagen/vim-be-good' },
   { 'nvim-treesitter/nvim-treesitter-context' },
