@@ -7,8 +7,6 @@ vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = '[P]roject [V]iew' })
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
-vim.keymap.set('i', '<C-c>', '<Esc>')
-
 vim.keymap.set('n', 'J', 'mzJ`z')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
@@ -42,7 +40,7 @@ vim.keymap.set('n', '<leader>ps', function()
   telescope.live_grep()
 end, { desc = '[P]roject [S]earch' })
 
-vim.keymap.set('n', '<leader>vh', telescope.help_tags, { desc = '[V]view telescope [H]elp' })
+vim.keymap.set('n', '<leader>vh', telescope.help_tags, { desc = '[V]view [H]elp' })
 
 vim.keymap.set('n', '<leader>gb', function()
   telescope.git_branches()

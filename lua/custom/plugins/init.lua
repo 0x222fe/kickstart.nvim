@@ -4,6 +4,8 @@
 -- See the kickstart.nvim README for more information
 require 'custom.plugins.fugitive'
 require 'custom.plugins.ufo'
+require 'custom.plugins.commentnvim'
+
 return {
   { 'ThePrimeagen/vim-be-good' },
   { 'nvim-treesitter/nvim-treesitter-context' },

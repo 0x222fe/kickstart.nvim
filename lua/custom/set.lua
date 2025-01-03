@@ -22,7 +22,7 @@ vim.opt.signcolumn = 'yes' -- Always show the sign column to prevent text shifti
 
 vim.opt.updatetime = 50 -- Reduce time for triggering swap writes and CursorHold
 
-vim.opt.colorcolumn = '80' -- Highlight the 80th column to maintain line length limits
+vim.opt.colorcolumn = '110' -- Highlight the x-th column to maintain line length limits
 
 
 vim.cmd [[highlight LineNr term=bold cterm=bold ctermfg=Yellow guifg=Yellow]]
