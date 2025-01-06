@@ -5,6 +5,7 @@
 require 'custom.plugins.fugitive'
 require 'custom.plugins.ufo'
 require 'custom.plugins.commentnvim'
+require 'custom.plugins.undotree'
 
 return {
   { 'ThePrimeagen/vim-be-good' },
